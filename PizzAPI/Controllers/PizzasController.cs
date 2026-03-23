@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PizzAPI.Dtos;
+using PizzAPI.interfaces;
 using PizzAPI.Services;
 
 namespace PizzAPI.Controllers
@@ -9,8 +10,8 @@ namespace PizzAPI.Controllers
     [ApiController]
     public class PizzasController : ControllerBase
     {
-        private readonly PizzasService _pizzasService;
-        public PizzasController(PizzasService pizzasService)
+        private readonly IPizzasService _pizzasService;
+        public PizzasController(IPizzasService pizzasService)
         {
             _pizzasService = pizzasService;
         }
