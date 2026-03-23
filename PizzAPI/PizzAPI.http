@@ -1,0 +1,6 @@
+@PizzAPI_HostAddress = http://localhost:5042
+
+GET {{PizzAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
